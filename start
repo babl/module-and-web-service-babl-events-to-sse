@@ -1,0 +1,4 @@
+#!/bin/sh
+
+babl-server
+sse-server
