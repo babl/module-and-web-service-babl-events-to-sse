@@ -24,7 +24,6 @@ func main() {
 			reader, _ := os.OpenFile("/tmp/events", os.O_RDONLY, 0600)
 			scanner := bufio.NewScanner(reader)
 			for scanner.Scan() {
-				fmt.Println(scanner.Text()) // Println will add back the final '\n'
 				streamer.SendString("", "", scanner.Text())
 			}
 			if err := scanner.Err(); err != nil {
